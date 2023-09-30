@@ -1,0 +1,51 @@
+[
+	{
+		"id": "13",
+		"title": "Spiderman",
+		"genre": 2,
+		"rating": 5,
+		"description": "Peter Parker then attains spider-like qualities such as genius-level intellect, superb scientist and inventor, superhuman strength, speed, durability, and agility, he has the ability to cling to most surfaces, precognitive spider-sense, and his wrist as web-shooters."
+	},
+	{
+		"id": "8F",
+		"title": "Batman",
+		"genre": 2,
+		"rating": 5,
+		"description": "Batman was originally introduced as a ruthless vigilante who frequently killed or maimed criminals, but evolved into a character with a stringent moral code and strong sense of justice. Unlike most superheroes, Batman does not possess any superpowers, instead relying on his intellect, fighting skills, and wealth."
+	},
+	{
+		"id": "01",
+		"title": "The Matrix",
+		"genre": 0,
+		"rating": 4.5,
+		"description": "A computer hacker learns the truth about reality."
+	},
+	{
+		"id": "02",
+		"title": "Inception",
+		"genre": 0,
+		"rating": 5,
+		"description": "A thief enters the dreams of others to steal their secrets."
+	},
+	{
+		"id": "03",
+		"title": "Jurassic Park",
+		"genre": 0,
+		"rating": 4,
+		"description": "Dinosaurs are brought back to life on a remote island."
+	},
+	{
+		"id": "04",
+		"title": "Pulp Fiction",
+		"genre": 1,
+		"rating": 4.7,
+		"description": "Interwoven stories of crime and redemption in Los Angeles."
+	},
+	{
+		"id": "05",
+		"title": "Avatar",
+		"genre": 0,
+		"rating": 4.2,
+		"description": "A paraplegic marine is sent to a distant planet."
+	}
+]

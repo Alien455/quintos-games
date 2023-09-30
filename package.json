@@ -1,0 +1,27 @@
+{
+	"author": "Alien455",
+	"name": "quintos-games",
+	"description": "Learn to code by making games using QuintOS!",
+	"dependencies": {
+		"@types/p5": "^1.7.0",
+		"java2js": "^1.1.2",
+		"p5": "^1.4.0",
+		"p5play": "^3.8.14",
+		"planck": "^1.0.0-alpha.4",
+		"quintos": "^6.0.4"
+	},
+	"license": "GPL-3.0-only",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Alien455/quintos-template.git"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"v": "npm version patch --force",
+		"V": "npm version minor --force",
+		"version": "git add -A",
+		"postversion": "git push",
+		"relink": "npm link ../../pkg/quintos"
+	},
+	"version": "1.1.19"
+}
