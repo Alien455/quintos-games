@@ -1,0 +1,41 @@
+#calc {
+	background-color: aqua;
+	width: 220px;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+#screen {
+	font-size: 30px;
+	margin-bottom: 10px;
+	width: 210px;
+}
+
+button {
+	font-size: 30px;
+	width: 40px;
+	border-radius: 10px;
+}
+
+.num {
+	background-color: #000000;
+	color: white;
+}
+
+.sym {
+	background-color: rgb(255, 10, 230);
+	color: rgb(255, 213, 220);
+}
+.equals {
+	background-color: blue;
+	color: rgb(75, 255, 75);
+	width: 220px;
+}
+
+#btns {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	gap: 10px;
+	width: 220px;
+}

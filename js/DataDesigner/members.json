@@ -1,16 +1,16 @@
 [
 	{
-		"id": "member1",
+		"id": "A1",
 		"name": "John Doe",
 		"rented": ["13"]
 	},
 	{
-		"id": "member2",
+		"id": "F2",
 		"name": "Jane Smith",
 		"rented": ["8F", "03", "02"]
 	},
 	{
-		"id": "member3",
+		"id": "O3",
 		"name": "Bob Johnson",
 		"rented": ["01", "05"]
 	}
