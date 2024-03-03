@@ -43,15 +43,32 @@ paddleR.y = 90;
 let balls = new Group();
 balls.img = imgBall;
 balls.rotationLock = true;
-balls.x = width / 2;
-balls.y = height / 2;
+balls.x = canvas.w / 2;
+balls.y = canvas.h / 2;
 balls.bounciness = 1;
 balls.friction = 0;
-// places a ball in center of the screen
-for (let i = 0; i < 4; i++) {
-	let ball = new balls.Sprite();
-	ball.velocity.y = Math.random() + 1;
-	ball.velocity.x = Math.random() + 1;
+
+let onScreen = [];
+serve();
+async function serve() {
+	// places a ball in center of the screen
+	for (let i = 0; i < 4; i++) {
+		let ball = new balls.Sprite();
+		let random = Math.random();
+		let random2 = Math.random();
+		if (random < 0.5) {
+			ball.velocity.y = Math.random() / 2 + 0.5;
+		} else {
+			ball.velocity.y = Math.random() / 2 - 1;
+		}
+		if (random2 < 0.5) {
+			ball.velocity.x = Math.random() / 2 + 0.5;
+		} else {
+			ball.velocity.x = Math.random() / 2 - 1;
+		}
+		onScreen.push(i);
+		await delay(3000);
+	}
 }
 
 balls.overlaps(balls);
@@ -59,7 +76,6 @@ let score = 0;
 
 txt(score, 3, 26);
 ballsLost = 0;
-let onScreen = [0, 1, 2, 3];
 
 function draw() {
 	background(0);
@@ -104,11 +120,12 @@ function draw() {
 			if (ball.x < 0 || ball.x > width || ball.y < 0 || ball.y > height) {
 				onScreen[i] = -1;
 				ballsLost += 1;
+				log(i, ballsLost);
 			}
 		}
 	}
 
-	if (ballsLost >= 4) {
+	if (ballsLost >= 3) {
 		gameOver();
 	}
 }
@@ -117,22 +134,12 @@ async function gameOver() {
 	ballsLost = 0;
 	await alert('YOU LOST... continue?');
 	score = 0;
-	onScreen = [0, 1, 2, 3];
+	onScreen = [];
 
 	newGame();
 }
 
 function newGame() {
-	balls.x = canvas.w / 2;
-	balls.y = canvas.h / 2;
-
-	for (let i = 0; i < 4; i++) {
-		let ball = balls[i];
-		if (Math.random() >= 0.5) {
-			ball.velocity.y = 1;
-		} else {
-			ball.velocity.y = -1;
-		}
-		ball.velocity.x = Math.random() + i;
-	}
+	balls.removeAll();
+	serve();
 }
