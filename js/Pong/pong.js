@@ -56,7 +56,7 @@ let scoreL = 0;
 let scoreR = 0;
 
 txt(scoreL, 3, 5);
-txt(scoreR, 3, 26);
+txt(score, 3, 26);
 
 function draw() {
 	background(0);
@@ -99,8 +99,8 @@ function draw() {
 
 	// ball went off the left side of the screenS
 	if (ball.x < 0) {
-		scoreR += 1;
-		txt(scoreR, 3, 26);
+		score += 1;
+		txt(score, 3, 26);
 		ball.velocity.x = 1.5;
 	}
 	if (ball.x > width) {
